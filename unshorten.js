@@ -17,12 +17,12 @@
 					'path': path
 				},
 				function(response) {
-					(callback || console.log)(response.headers.location || url);
+					(callback || url);
 				}
 			).end();
 		} else {
-			console.error('Not a valid URL: ' + url);
-			(callback || console.log)(url);
+			
+			(callback);
 		}
 	}
 
